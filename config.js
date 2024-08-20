@@ -4,12 +4,18 @@ const CONFIG = {
     btnIntro: 'hihi',
     title: 'Phải chăng anh đã yêu ngay từ cái nhìn đầu tiên 😙',
     desc: 'Phải chăng anh đã say ngay từ lúc thấy nụ cười ấy ',
-    message: `Anh yêu em rất nhiều. 
-    Mỗi ngày trôi qua bên em là một ngày hạnh phúc. 
-    Em là điều tuyệt vời nhất trong cuộc đời anh. 
-    Anh mong muốn được cùng em trải qua mọi khoảnh khắc, 
-    vui vẻ, buồn bã, và mọi điều trong cuộc sống. 
-    Em có đồng ý làm bạn gái của anh không?`,
+    message: `Thân gửi bạn Duyên, 
+
+    Khi bạn đọc được những nội dung này thì chắc chắn bạn đã trở thành một phần trong cuộc sống của bạn Toàn rồi đó, bạn Toàn không nghĩ niềm vui này lại đến sớm như vậy.
+    
+    Cảm ơn bạn đã tới và ở lại trong cuộc sống của mình.
+    Con đường tương lai phía trước bạn Toàn cũng không biết sẽ như thế nào nhưng....
+    
+    Bạn Hồ Đắc Toàn xin hứa sẽ dùng tốt cả tình yêu thương để che chở, quan tâm, chăm sóc cho bạn Đặng Mỹ Duyên, dù tương lai có khó khăn, trắc trở thì cũng sẽ cùng bạn Duyên vượt qua, không để bạn Duyên phải buồn hay chịu bất kì sự tổn thương nào dù chỉ là nhỏ nhất.
+    Chỉ mong rằng bạn Duyên sẽ luôn vui vẻ, bình an và phải thương bạn Toàn thật nhiều nhé 😘😘😘😘😘😘😘
+
+    I love you 🥰
+    `,
     btnYes: 'Vẫn cứ là thích anh <33',
     btnNo: 'Không, Anh trai à :3',
     question:'Trên thế giới hơn 7 tỉ người mà sao em lại yêu anh <3',

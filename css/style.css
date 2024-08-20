@@ -93,9 +93,16 @@ header h4 {
 #text {
   max-width: 1024px;
   width: 100%;
-  margin: auto;
+  margin: 50px ;
   padding: 25px;
   font-size: larger;
   color: white;
-  background: rgb(219 29 18 / 28%);
+  background: #c96d6dd4;
+  white-space: pre-line;
+}
+
+.wrapper {
+  padding: 50px 20px;
+  margin: auto;
+  max-width: 1024px;
 }

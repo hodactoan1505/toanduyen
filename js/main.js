@@ -1,24 +1,23 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // process bar
-    setTimeout(function() {
-        firstQuestion();
-        $('.spinner').fadeOut();
-        $('#preloader').delay(350).fadeOut('slow');
-        $('body').delay(350).css({
+    setTimeout(async function () {
+        await firstQuestion();
+        await $('.spinner').fadeOut();
+        await $('#preloader').delay(350).fadeOut('slow');
+        await $('body').delay(350).css({
             'overflow': 'visible'
         });
-        typeWriter();
     }, 600);
 })
 
-function init(){
+function init() {
     $('#title').text(CONFIG.title)
     $('#desc').text(CONFIG.desc)
     $('#yes').text(CONFIG.btnYes)
     $('#no').text(CONFIG.btnNo)
 }
 
-function firstQuestion(){
+async function firstQuestion() {
     $('.content').hide();
     Swal.fire({
         title: CONFIG.introTitle,
@@ -29,27 +28,26 @@ function firstQuestion(){
         background: '#fff url("img/iput-bg.jpg")',
         imageAlt: 'Custom image',
         input: 'text',
-        inputLabel: 'Nhập câu trả lời của bạn',
         inputPlaceholder: 'Nhập tại đây...',
         confirmButtonText: 'Gửi',
         inputValidator: (value) => {
             if (!value) {
-                return 'Bạn cần nhập một câu trả lời!';
+                return 'Người thương của bạn tên "Toàn" đó bạn ơi ..!!!';
             } else if (value.toLowerCase() !== 'toàn') {
-                return 'Câu trả lời không đúng! Người thương của bạn tên "Toàn" mà!!!.';
+                return 'Câu trả lời không đúng! Người thương của bạn tên "Toàn" mà ..!!!.';
             }
         }
-      }).then(function(){
+    }).then(async function () {
         $('.content').show(200);
+        // var audio = new Audio('https://res.cloudinary.com/dmnxeusyw/video/upload/v1668310333/sharecs.net/music_ji3iak.mp3');
+        // audio.play();
 
-        
-        var audio = new Audio('https://res.cloudinary.com/dmnxeusyw/video/upload/v1668310333/sharecs.net/music_ji3iak.mp3');
-        audio.play();
-      })
+        await typeWriter();
+    })
 }
 
- // switch button position
- function switchButton() {
+// switch button position
+function switchButton() {
     var leftNo = $('#no').css("left");
     var topNO = $('#no').css("top");
     var leftY = $('#yes').css("left");
@@ -61,7 +59,7 @@ function firstQuestion(){
 }
 // move random button póition
 function moveButton() {
-    var x = Math.random() * ($(window).width() - $('#no').width()) * 0.9 ;
+    var x = Math.random() * ($(window).width() - $('#no').width()) * 0.9;
     var y = Math.random() * ($(window).height() - $('#no').height()) * 0.9;
     var left = x + 'px';
     var top = y + 'px';
@@ -72,7 +70,7 @@ function moveButton() {
 init()
 
 var n = 0;
-$('#no').mousemove(function() {
+$('#no').mousemove(function () {
     if (n < 1)
         switchButton();
     if (n > 1)
@@ -80,7 +78,7 @@ $('#no').mousemove(function() {
     n++;
 });
 $('#no').click(() => {
-    if (screen.width>=900)
+    if (screen.width >= 900)
         switchButton();
 })
 
@@ -109,7 +107,7 @@ function textGenerate() {
 const textElement = document.getElementById('text');
 let index = 0;
 
-function typeWriter() {
+async function typeWriter() {
     if (index < CONFIG.message.length) {
         textElement.innerHTML += CONFIG.message.charAt(index);
         index++;
@@ -119,7 +117,7 @@ function typeWriter() {
 
 
 // show popup
-$('#yes').click(function() {
+$('#yes').click(function () {
     Swal.fire({
         title: CONFIG.question,
         html: true,
@@ -147,7 +145,7 @@ $('#yes').click(function() {
                 confirmButtonColor: '#83d0c9',
                 onClose: () => {
                     window.location = CONFIG.messLink;
-                  }
+                }
             })
         }
     })
