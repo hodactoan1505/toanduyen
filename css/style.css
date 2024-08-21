@@ -2,20 +2,6 @@
     position: relative;
     z-index: 3;
   }
-  #no{
-    position: absolute;
-    display: inline-block;
-    left: 35%; 
-    top: 40vh;
-    -webkit-transition: all 0.1s ease-out;
-  }
-  #yes{
-    position: absolute;
-    display: inline-block;
-    left: 70%; 
-    top: 40vh;
-    -webkit-transition: all 0.3s ease-out;
-  }
 #bg{
   position: fixed;
   top: 0;
@@ -66,24 +52,6 @@ header h4 {
     text-align: center;
     padding: 15px;
   }
-  #no{
-    position: absolute;
-    display: inline-block;
-    left: 7%; 
-    top: 40vh;
-    font-size: 14px;
-    padding: 3px;
-    -webkit-transition: all 0.1s ease-out;
-  }
-  #yes{
-    position: absolute;
-    display: inline-block;
-    left: 58%; 
-    top: 40vh;
-    font-size: 14px;
-    padding: 3px;
-    -webkit-transition: all 0.3s ease-out;
-  }
 }
 
 .swal2-backdrop-show{
@@ -93,7 +61,7 @@ header h4 {
 #text {
   max-width: 1024px;
   width: 100%;
-  margin: 50px ;
+  margin: auto ;
   padding: 25px;
   font-size: larger;
   color: white;
@@ -105,4 +73,25 @@ header h4 {
   padding: 50px 20px;
   margin: auto;
   max-width: 1024px;
+}
+
+#no.move {
+  left: 0;
+  transform: translateY(100%);
+}
+
+#yes {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  margin-top: 10px;
+}
+
+#no {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  margin-top: 10px;
 }
