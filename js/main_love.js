@@ -218,5 +218,12 @@ $('.play').click(function () {
     $('.overlay').hide();
     $('.play').hide();
     var audio = new Audio('https://res.cloudinary.com/dmnxeusyw/video/upload/v1668310333/sharecs.net/music_ji3iak.mp3');
+
+    audio.addEventListener('ended', () => {
+        console.log('Âm thanh đã kết thúc');
+        window.location = CONFIG.indexLink;
+    });
+
     audio.play();
 })
+

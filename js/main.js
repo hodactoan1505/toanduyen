@@ -41,8 +41,12 @@ async function firstQuestion() {
         }
     }).then(function () {
         $('.content').show(200);
-        // var audio = new Audio('https://res.cloudinary.com/dmnxeusyw/video/upload/v1668310333/sharecs.net/music_ji3iak.mp3');
-        // audio.play();
+        var audio = new Audio('https://res.cloudinary.com/dlibxjlp6/video/upload/v1724335827/hdtoan/qbcwxg3hzjqws2rikoty.mp3');
+
+        audio.addEventListener('play', () => {
+            localStorage.setItem('audioState', 'playing');
+        });
+        audio.play();
 
         typeWriter().then(() => {
             $('#no').show();
@@ -88,7 +92,7 @@ function typeWriter() {
             if (index < CONFIG.message.length) {
                 textElement.innerHTML += CONFIG.message.charAt(index);
                 index++;
-                setTimeout(typing, 50); // Adjust the speed here
+                setTimeout(typing, 100); // Adjust the speed here
             } else {
                 resolve(); // Notify that typing is done
             }
