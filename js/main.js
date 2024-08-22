@@ -41,7 +41,7 @@ async function firstQuestion() {
         }
     }).then(function () {
         $('.content').show(200);
-        var audio = new Audio('https://res.cloudinary.com/dlibxjlp6/video/upload/v1724335827/hdtoan/qbcwxg3hzjqws2rikoty.mp3');
+        var audio = new Audio("./sound/littleLove.mp3");
 
         audio.addEventListener('play', () => {
             localStorage.setItem('audioState', 'playing');
