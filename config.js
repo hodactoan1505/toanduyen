@@ -1,7 +1,6 @@
 const CONFIG = {
     introTitle: 'Bạn Duyên ơi!',
-    introDesc: `Mật khẩu đăng nhập là tên của bạn đó!`,
-    btnIntro: 'hihi',
+    introDesc: `Mật đúng mật khẩu đăng nhập bạn nhé ..!`,
     title: 'Phải chăng anh đã yêu ngay từ cái nhìn đầu tiên 😙',
     desc: 'Phải chăng anh đã say ngay từ lúc thấy nụ cười ấy ',
     message: `Bạn Duyên thân mến, 

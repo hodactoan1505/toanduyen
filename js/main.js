@@ -22,7 +22,7 @@ async function firstQuestion() {
     Swal.fire({
         title: CONFIG.introTitle,
         text: CONFIG.introDesc,
-        imageUrl: 'img/lookMe.jpg',
+        imageUrl: 'img/form_bg.jpg',
         imageWidth: 300,
         imageHeight: 300,
         background: '#fff url("img/iput-bg.jpg")',
@@ -33,10 +33,10 @@ async function firstQuestion() {
         inputValidator: (value) => {
             if (!value) {
                 return 'Nhầm rồi nè ..!!!';
-            } else if (value.toLowerCase() === 'duyên' || value.toLowerCase() === 'duyen') {
+            } else if (value.toLowerCase() === '24082024') {
                 return;
             } else {
-                return 'Nhập tên bạn để bắt đầu nhé ..!!!.';
+                return 'Nhập lại chính xác ngày nào bạn ơi ..!!!.';
             }
         }
     }).then(function () {
@@ -60,28 +60,6 @@ init()
 $('#no').click(() => {
     $('#no').toggleClass("move");
 })
-
-// generate text in input
-function textGenerate() {
-    var n = "";
-    var text = " " + CONFIG.reply;
-    var a = Array.from(text);
-    var textVal = $('#txtReason').val() ? $('#txtReason').val() : "";
-    var count = textVal.length;
-    if (count > 0) {
-        for (let i = 1; i <= count; i++) {
-            n = n + a[i];
-            if (i == text.length + 1) {
-                $('#txtReason').val("");
-                n = "";
-                break;
-            }
-        }
-    }
-    $('#txtReason').val(n);
-    setTimeout("textGenerate()", 1);
-}
-
 
 const textElement = document.getElementById('text');
 let index = 0;
