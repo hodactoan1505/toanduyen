@@ -70,7 +70,7 @@ function typeWriter() {
             if (index < CONFIG.message.length) {
                 textElement.innerHTML += CONFIG.message.charAt(index);
                 index++;
-                setTimeout(typing, 100); // Adjust the speed here
+                setTimeout(typing, 95); // Adjust the speed here
             } else {
                 resolve(); // Notify that typing is done
             }
